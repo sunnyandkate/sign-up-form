@@ -1,0 +1,161 @@
+body{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family: 'Poppins', sans-serif;
+	font-size:16px;
+
+
+}
+/*container*/
+.overlay{
+	background:hsl(0, 100%, 74%);
+	width:100vw;
+	height:100%;
+}
+.container{
+	background-image:url("images/bg-intro-mobile.png");
+	background-size:cover;
+	width:100vw;
+	height:100%;
+}
+.main-container{
+	width:85%;
+	margin:auto;
+	padding-top:3em;
+	padding-bottom:3em;
+}
+
+/*header*/
+header{
+	text-align:center;
+	max-width:750px;
+}
+.title{
+	margin-top:0;
+	color:white;
+	font-size:1.8em;
+}
+
+.description, .info{
+	color:white;
+	font-size:1.1em;
+}
+
+.info{
+	background-color:hsl(248, 32%, 49%);
+	border-radius:10px;
+	padding:1.5em 4em;
+	border:none;
+	box-shadow: 0 7px 3px rgba(32, 27, 27, 0.31);
+	margin: 3em auto;
+	width: 100%;
+	line-height:1.5;
+	font-size:1em;
+	cursor:pointer;
+	max-width:750px;
+}
+.info span{
+	font-weight:600;
+}
+
+/*form*/
+.form_container{
+	background-color:white;
+	border-radius:10px;
+	text-align:center;
+	padding:10px;
+	max-width:750px;
+	box-shadow: 0 7px 3px rgba(32, 27, 27, 0.31);
+}
+#form-group{
+	margin:2.5em 0;
+}
+input{
+	color:#000000eb;
+	border-radius:5px;
+	border:1px solid hsl(246, 25%, 77%);
+	padding:20px;
+	width:80%;
+	
+	font-weight:600;
+}
+input:focus{
+	border:1px solid hsl(248, 32%, 49%);
+}
+.submitBtn{
+	background-color:hsl(154, 59%, 51%);
+	color:white;
+	text-transform:uppercase;
+	border-radius:10px;
+	padding:16px 25px;
+	border:none;
+	margin-top:1.5em;
+	width:92%;
+	letter-spacing:1px;
+	font-weight:600;
+	box-shadow: 0 1px #34b97f inset,0 -5px #34b97f inset, -1px 0 #34b97f inset, 1px 0 #34b97f inset;
+	cursor:pointer;
+}
+.submitBtn:hover{
+	opacity:0.85;
+}
+.agree{
+	text-align:center;
+	width: 80%;
+	margin:1em auto;
+}
+.agree > p{
+	color:hsl(246, 25%, 77%);
+	font-size:.7em;
+}
+.agree >p >a{
+	color:hsl(0, 100%, 74%);
+	text-decoration:none;
+}
+.emptyFirstName, .emptyLastName, .emptyEmail, .emptyPwd{
+	color:red;
+	text-align:right;
+	margin-right:3.5em;
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+.error{
+	
+	border-color:red;
+	background-image:url('images/icon-error.svg');
+	background-repeat:no-repeat;
+	background-position:98% center;
+	
+}
+/*footer*/
+footer{
+	padding-bottom:1em;
+}
+/*media querie*/
+@media(min-width:1000px){
+	
+	.container{
+	background-image:url("images/bg-intro-desktop.png");
+	}
+	.main-container{
+		width:90%;
+	}
+	.left-container, .right-container{
+		display:inline-block;
+		width:45%;
+		vertical-align:middle;
+	}
+	header{
+		text-align:left;
+		padding:20px;
+	}
+	.title{
+		font-size:2.8em;
+	}
+	.attribution{
+		font-size:1em;
+	}
+	
+	
+}
