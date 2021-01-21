@@ -24,12 +24,19 @@ formGroup.addEventListener("submit", function(e){
 		firstName.removeAttribute("placeholder");
 		
 	}
+	else{
+		firstName.classList.remove('error');
+		emptyFirstName.textContent="";
+	}
 	if(lastName.value === ""){
 		e.preventDefault();
 		emptyLastName.textContent = "Last Name cannot be empty";
 		
 		lastName.removeAttribute("placeholder");
 		lastName.classList.add('error');
+	}else{
+		lasstName.classList.remove('error');
+		emptyLastName.textContent="";
 	}
 	if(yourEmail.value === ""){
 		
@@ -56,6 +63,9 @@ formGroup.addEventListener("submit", function(e){
 		yourEmail.style.fontWeight="400";
 		
 	
+	}else{
+		yourEmail.classList.remove('error');
+		emptyEmail.textContent="";
 	}
 	if(yourPwd.value === ""){
 		
@@ -63,6 +73,9 @@ formGroup.addEventListener("submit", function(e){
 		emptyPwd.textContent = "Password cannot be empty";
 		yourPwd.classList.add('error');
 		yourPwd.removeAttribute("placeholder");
+	}else{
+		yourPwd.classList.remove('error');
+		emptyPwd.textContent="";
 	}
 		
 		
