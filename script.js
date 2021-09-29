@@ -13,7 +13,6 @@ var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9
 
 var formGroup=document.querySelector('#form-group');
 
-
 formGroup.addEventListener("submit", function(e){
 	
 	if(firstName.value === ""){
@@ -24,17 +23,22 @@ formGroup.addEventListener("submit", function(e){
 		firstName.removeAttribute("placeholder");
 		
 	}
+	else{
+		firstName.classList.remove('error');
+		emptyFirstName.textContent="";
+	}
 	if(lastName.value === ""){
 		e.preventDefault();
 		emptyLastName.textContent = "Last Name cannot be empty";
-		
 		lastName.removeAttribute("placeholder");
 		lastName.classList.add('error');
+	}else{
+		lasstName.classList.remove('error');
+		emptyLastName.textContent="";
 	}
 	if(yourEmail.value === ""){
 		
-		e.preventDefault();
-		
+		e.preventDefault();	
 		emptyEmail.textContent = "Looks like this is not an email";
 		yourEmail.value="email@example/com";
 		yourEmail.classList.add("error");
@@ -46,7 +50,6 @@ formGroup.addEventListener("submit", function(e){
 	}else if(yourEmail.value.match(mailformat) !== true){
 		
 		e.preventDefault();
-		
 		emptyEmail.textContent = "Looks like this is not an email";
 		yourEmail.value="email@example/com";
 		yourEmail.classList.add("error");
@@ -56,6 +59,9 @@ formGroup.addEventListener("submit", function(e){
 		yourEmail.style.fontWeight="400";
 		
 	
+	}else{
+		yourEmail.classList.remove('error');
+		emptyEmail.textContent="";
 	}
 	if(yourPwd.value === ""){
 		
@@ -63,9 +69,8 @@ formGroup.addEventListener("submit", function(e){
 		emptyPwd.textContent = "Password cannot be empty";
 		yourPwd.classList.add('error');
 		yourPwd.removeAttribute("placeholder");
-	}
-		
-		
-		
-		
+	}else{
+		yourPwd.classList.remove('error');
+		emptyPwd.textContent="";
+	}	
 });
